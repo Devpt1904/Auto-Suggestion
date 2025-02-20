@@ -1,0 +1,139 @@
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #008080, #00b3b3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Search Box Container */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.03);
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 15px;
+    color: #008080;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+/* Search Input Field */
+input {
+    width: 90%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #00b3b3;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input:focus {
+    border-color: #004c4c;
+    box-shadow: 0px 4px 10px rgba(0, 179, 179, 0.5);
+}
+
+/* Suggestions Box */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    max-height: 200px;
+    overflow-y: auto;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Suggestion Items */
+li {
+    padding: 12px;
+    cursor: pointer;
+    background: #cceff0;
+    border-bottom: 1px solid #b3e0e0;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Adding a subtle hover effect */
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    background: #008080;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Adding an icon animation */
+li::after {
+    content: "🔍";
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+li:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Scrollbar Styling */
+ul::-webkit-scrollbar {
+    width: 6px;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background: #008080;
+    border-radius: 10px;
+}
+
+ul::-webkit-scrollbar-track {
+    background: #cceff0;
+}
